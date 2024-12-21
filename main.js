@@ -37,8 +37,8 @@ let cachedSnapshots = {};
 function prepareReactFiles() {
     // there is a problem that node.js does not support "export default", so remove it manually from these files and create new
     // after that require changed files and not original ones.
-    let _chartModel = fs.readFileSync(`${__dirname}/src-chart/src/Components/ChartModel.js`).toString('utf8');
-    let _chartOption = fs.readFileSync(`${__dirname}/src-chart/src/Components/ChartOption.js`).toString('utf8');
+let _chartModel  = fs.readFileSync(`${__dirname}/src-chart/src/Components/ChartModel.js`).toString('utf8');
+let _chartOption = fs.readFileSync(`${__dirname}/src-chart/src/Components/ChartOption.js`).toString('utf8');
     _chartModel = _chartModel.replace('export default ', 'module.exports = ');
     _chartOption = _chartOption.replace('export default ', 'module.exports = ');
 
